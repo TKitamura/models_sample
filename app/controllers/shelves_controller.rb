@@ -5,14 +5,21 @@ class ShelvesController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:user_id])
+    @shelf = @user.shelves.find(params[:id])
+    @shelf.destroy
+    redirect_to user_path(@user)
   end
 
   def create
     @user = User.find(params[:user_id])
-    @self = @user.shelves.create(params[:shelf])
+    @shelf = @user.shelves.create(params[:shelf])
     redirect_to user_path(@user)
     #@shelves = @user.shelves
   end
 
-
+  def show
+    @user = User.find(params[:user_id])
+    @shelf = @user.shelves.find(params[:id])
+  end
 end

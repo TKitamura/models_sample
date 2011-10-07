@@ -1,0 +1,7 @@
+<h1><%= @shelf.shelf_name %></h1>
+<p><%= @shelf.shelf_description %></p>
+<p>
+ <%= link_to 'Destroy this shelf',[@shelf.user,@shelf],
+                 :confirm => "Are you sure?",
+                 :method => :delete %>
+</p>
