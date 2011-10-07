@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Shelves', user_shelves_path(@user) %>
+<%= link_to 'create shelf',new_user_shelf_path(@user) %>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+<ul>
+<%= @user.shelves.each do |shelf| %>
+<li>
+<%= shelf.shelf_name %>
+<%= link_to "details", user_shelf_path(@user,shelf) %> 
+</li>
+<% end %>
+</ul>

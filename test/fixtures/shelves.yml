@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  shelf_name: MyString
+  shelf_description: MyString
+
+two:
+  shelf_name: MyString
+  shelf_description: MyString

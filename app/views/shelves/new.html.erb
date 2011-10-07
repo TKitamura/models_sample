@@ -1,0 +1,15 @@
+<h1>Shelves#new</h1>
+<p>Find me in app/views/shelves/new.html.erb</p>
+<%= form_for([@user, @user.shelves.build]) do |f| %>
+  <div class="field">
+    <%= f.label :shelf_name %><br />
+    <%= f.text_field :shelf_name %>
+  </div>
+  <div class="field">
+    <%= f.label :shelf_description %><br />
+    <%= f.text_area :shelf_description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
